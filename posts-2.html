@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · sf-t3-1779642675702-057</title>
+  <meta name="description" content="sf-t3-1779642675702-057에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://deungchon-room-note.hardcoreroom.com/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* Reset & Base */
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ scroll-behavior: smooth;
+ font-size: 16px;
+ -webkit-font-smoothing: antialiased;
+ }
+ body {
+ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+ background-color: #f8f9fa;
+ color: #1a1a1a;
+ line-height: 1.6;
+ padding: 0 1rem;
+ }
+ /* Container */
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 1.5rem 1rem;
+ }
+ /* Typography */
+ h1, h2, h3 {
+ font-weight: 600;
+ letter-spacing: -0.02em;
+ line-height: 1.2;
+ color: #0b0b0b;
+ }
+ h1 {
+ font-size: 2.5rem;
+ margin-bottom: 1.25rem;
+ border-bottom: 2px solid #d4d4d4;
+ padding-bottom: 0.75rem;
+ }
+ h2 {
+ font-size: 1.75rem;
+ margin: 2.5rem 0 1rem;
+ border-left: 4px solid #2b2b2b;
+ padding-left: 1rem;
+ }
+ h3 {
+ font-size: 1.25rem;
+ margin: 1.75rem 0 0.75rem;
+ }
+ p {
+ margin-bottom: 1.25rem;
+ color: #2e2e2e;
+ }
+ a {
+ color: #1a1a1a;
+ text-decoration: none;
+ border-bottom: 1px solid #a0a0a0;
+ transition: border-color 0.15s;
+ }
+ a:hover {
+ border-bottom: 1px solid #000;
+ }
+ /* Header / Nav */
+ header {
+ background: #ffffff;
+ border-bottom: 1px solid #e5e5e5;
+ position: sticky;
+ top: 0;
+ z-index: 50;
+ backdrop-filter: blur(2px);
+ }
+ nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0.9rem 1rem;
+ }
+ .logo {
+ font-weight: 600;
+ font-size: 1.4rem;
+ letter-spacing: -0.5px;
+ color: #000;
+ border: none;
+ }
+ .logo:hover {
+ border: none;
+ }
+ .nav-links {
+ display: flex;
+ gap: 2rem;
+ align-items: center;
+ }
+ .nav-links a {
+ font-size: 0.9rem;
+ font-weight: 500;
+ color: #1f1f1f;
+ border: none;
+ text-transform: uppercase;
+ letter-spacing: 0.02em;
+ transition: color 0.2s;
+ }
+ .nav-links a:hover {
+ color: #555;
+ border: none;
+ }
+ /* 패턴: hamburger-menu (mobile) */
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 0.25rem;
+ }
+ .hamburger span {
+ width: 26px;
+ height: 2px;
+ background: #1a1a1a;
+ display: block;
+ }
+ /* 패턴: tel-link */
+ .tel-link {
+ background: #1e1e1e;
+ color: white !important;
+ padding: 0.4rem 1.2rem;
+ border-radius: 30px;
+ font-weight: 500;
+ font-size: 0.85rem;
+ border: none;
+ transition: background 0.2s;
+ }
+ .tel-link:hover {
+ background: #3a3a3a;
+ border: none;
+ }
+ /* 카드/섹션 공통 */
+ .info-card {
+ background: #ffffff;
+ border: 1px solid #ececec;
+ padding: 2rem 2rem 2rem 2rem;
+ margin: 2rem 0;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+ }
+ .grid-2 {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2rem;
+ }
+ .stat-block {
+ background: #f2f2f2;
+ padding: 1.5rem;
+ border-left: 3px solid #2b2b2b;
+ margin-bottom: 1.5rem;
+ }
+ .stat-number {
+ font-size: 2.2rem;
+ font-weight: 600;
+ letter-spacing: -0.03em;
+ color: #000;
+ }
+ .stat-label {
+ font-size: 0.9rem;
+ color: #3a3a3a;
+ text-transform: uppercase;
+ letter-spacing: 0.04em;
+ }
+ .faq-item {
+ border-bottom: 1px solid #ddd;
+ padding: 1.2rem 0;
+ }
+ .faq-question {
+ font-weight: 600;
+ font-size: 1.1rem;
+ cursor: default;
+ margin-bottom: 0.4rem;
+ }
+ .faq-answer {
+ color: #3b3b3b;
+ padding-left: 0.5rem;
+ }
+ footer {
+ text-align: center;
+ padding: 3rem 0 1.5rem;
+ font-size: 0.85rem;
+ color: #5a5a5a;
+ border-top: 1px solid #e2e2e2;
+ margin-top: 3rem;
+ }
+ /* 반응형 768px */
+ @media (max-width: 768px) {
+ .nav-links {
+ display: none;
+ flex-direction: column;
+ background: white;
+ position: absolute;
+ top: 60px;
+ left: 0;
+ width: 100%;
+ padding: 1rem 1.5rem;
+ box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+ gap: 1.2rem;
+ align-items: flex-start;
+ border-bottom: 1px solid #eaeaea;
+ }
+ .nav-links.active {
+ display: flex;
+ }
+ .hamburger {
+ display: flex;
+ }
+ .grid-2 {
+ grid-template-columns: 1fr;
+ gap: 1.5rem;
+ }
+ h1 {
+ font-size: 2rem;
+ }
+ h2 {
+ font-size: 1.5rem;
+ }
+ .container {
+ padding: 1rem 0.5rem;
+ }
+ .info-card {
+ padding: 1.5rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · sf-t3-1779642675702-057">
+  <meta property="og:description" content="sf-t3-1779642675702-057에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://deungchon-room-note.hardcoreroom.com/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <nav>
+ <a href="#" class="logo">백링크 자동화</a>
+ <div class="nav-links" id="navLinks">
+ <a href="#">홈</a>
+ <a href="#">정보</a>
+ <a href="#">솔루션</a>
+ <a href="#">데이터</a>
+ <a href="#">문의</a>
+ 
+ </div>
+ <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기">
+ 
+ 
+ 
+ </button>
+ </nav>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0001.html">백링크 자동화 프로그램 활용한 상수 마사지 추천정보와 초행 주의사항</a>
+        <p class="post-item__summary">오랜 업무로 인해 어깨와 목이 뭉쳐 괴로워하던 직장인 김 씨는 인터넷 검색을 통해 해결책을 찾기로 했습니다. 검색 알고리즘의 효율을 높이는 백링크 자동화 프로그램 방식처럼 필요한 정보를 정교하게 선</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0002.html">백링크 자동화 프로그램 적용으로 찾는 홍대 노래방 추천정보와 시간대</a>
+        <p class="post-item__summary">많은 이들이 홍대 노래방은 시설이 천차만별이라며 섣부른 오해를 하곤 합니다. 하지만 디지털 환경에서 백링크 자동화 프로그램이 정확한 경로를 찾아내듯, 꼼꼼히 비교하면 합리적인 선택이 충분히 가능합니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0003.html">백링크 자동화 프로그램 기반의 연남 클럽 추천정보 및 인원 구성 팁</a>
+        <p class="post-item__summary">성공적인 밤을 위해 고려해야 할 충족 조건들은 너무나도 다양합니다. 백링크 자동화 프로그램처럼 복잡한 변수를 효율적으로 정리해 주는 연남 클럽 추천정보는 즐거운 시간을 위한 필수적인 길잡이가 됩니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0004.html">백링크 자동화 프로그램 활용한 합정 셔츠룸 추천정보와 비교 기준</a>
+        <p class="post-item__summary">당신은 오늘 밤, 어떤 기준으로 업체를 선택하고 계십니까? 단순히 검색 상위 결과만을 따르기보다는 백링크 자동화 프로그램처럼 신뢰도 높은 데이터를 활용하는 지혜가 필요합니다. 신중하게 검토하여 정리</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0005.html">백링크 자동화 프로그램 활용하듯 꼼꼼히 따져보는 공덕 가라오케 추천정보</a>
+        <p class="post-item__summary">디지털 환경에서 백링크 자동화 프로그램 도입이 효율적인 결과를 도출하듯, 오프라인 유흥 공간 선택에도 체계적인 접근이 필요합니다. 공덕 일대에서 만족스러운 시간을 보내기 위해서는 단순히 검색 상단에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0006.html">백링크 자동화 프로그램 비교보다 신중한 망원 노래방 추천정보 선택 기준</a>
+        <p class="post-item__summary">마치 백링크 자동화 프로그램의 알고리즘을 비교하듯, 이용자는 망원 내 노래방을 선택할 때 분명한 기준을 세워야 합니다. 대규모 프랜차이즈 형식을 따르는 곳과 개성 있는 로컬 업소를 대조해보면 각자의</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0007.html">백링크 자동화 프로그램만큼 까다로운 공덕 셔츠룸 추천정보 및 예약 절차</a>
+        <p class="post-item__summary">백링크 자동화 프로그램 설정 과정에서 작은 오류가 전체 효율을 떨어뜨리듯, 공덕 셔츠룸 이용 시에도 예약 절차에서 실수가 발생하면 즐거운 모임이 틀어질 수 있습니다. 예약 실패는 대개 소통의 부재나</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0008.html">백링크 자동화 프로그램 검수하듯 확인하는 연남 유흥 추천정보 및 체크리스트</a>
+        <p class="post-item__summary">백링크 자동화 프로그램의 성과를 검수할 때 데이터의 품질을 따지는 것과 같이, 연남 유흥 업소를 찾을 때도 검증된 체크리스트가 필요합니다. 무작정 방문했다가 접근성이나 분위기가 기대와 달라 낭패를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0009.html">백링크 자동화 프로그램 활용한 마곡 가라오케 추천정보 가이드</a>
+        <p class="post-item__summary">비즈니스 목적의 모임이나 지인들과의 유쾌한 회식 자리를 위해 장소를 물색할 때, 검색 효율을 높이기 위해 백링크 자동화 프로그램 방식을 참고하는 경우가 늘고 있습니다. 하지만 마곡 가라오케 추천정보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0010.html">백링크 자동화 프로그램 통한 마곡 유흥 추천정보 확인하는 방법</a>
+        <p class="post-item__summary">흔히 검색 엔진의 기술적 도구인 백링크 자동화 프로그램 결과물이 모든 지역 정보를 대변할 것이라 믿는 분들이 많습니다. 그러나 마곡 유흥 추천정보 영역에서는 검색 상단에 노출되는 업소만이 반드시 최</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0011.html">백링크 자동화 프로그램 참고하여 찾는 합정 노래방 추천정보</a>
+        <p class="post-item__summary">쾌적한 음향 시설과 청결한 내부 공간, 그리고 친절한 서비스는 좋은 노래방을 선택하는 세 가지 충족 조건입니다. 백링크 자동화 프로그램 기반의 알고리즘이 알려주는 정보 외에도, 우리가 실제 방문할 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-23zep3.html">스트릿패션 해결 방법 총정리</a>
+        <p class="post-item__summary">마포 지역은 개성 넘치는 패션 감각을 지닌 사람들이 모이는 장소입니다. 이곳에서 자신만의 스트릿패션을 완성하기 위해서는 전체적인 실루엣과 소재의 조화를 고려해야 합니다. 단순히 유행을 따르는 것을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-23zep3.html">백링크 자동화 프로그램 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">최근 마포 지역의 스트릿패션 브랜드나 온라인 쇼핑몰 운영자들 사이에서 검색 엔진 최적화에 대한 관심이 급증하고 있습니다. 특히 한정된 시간 내에 효율적인 홍보 효과를 거두기 위해 백링크 자동화 프로</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
